@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="dubboDispatchServer" class="qunar.tc.dubbocopy.server.DubboDispatchServer">
+		<constructor-arg name="serverPort" value="30880" />
+        <property name="dispatchHandler" ref="dubboDispatchHandler" />
+	</bean>
+
+	<bean id="httpDispatchServer" class="qunar.tc.dubbocopy.server.HttpDispatchServer">
+		<constructor-arg name="serverPort" value="8888" />
+        <property name="dispatchHandler" ref="httpDispatchHandler" />
+	</bean>
+
+	<bean id="dubboDispatchHandler" class="qunar.tc.dubbocopy.handler.DispatchHandler">
+        <property name="connectionPool" ref="dubboConnectionPool" />
+    </bean>
+
+	<bean id="httpDispatchHandler" class="qunar.tc.dubbocopy.handler.DispatchHandler">
+        <property name="connectionPool" ref="httpConnectionPool" />
+    </bean>
+
+    <bean id="dubboConnectionPool" class="qunar.tc.dubbocopy.conn.CachedConnectionPool" />
+    <bean id="httpConnectionPool" class="qunar.tc.dubbocopy.conn.HttpConnectionPool" />
+
+    <bean id="idleCloseHandler" class="qunar.tc.dubbocopy.handler.IdleCloseHandler" />
+
+</beans>

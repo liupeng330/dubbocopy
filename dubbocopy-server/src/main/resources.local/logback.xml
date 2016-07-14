@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- console -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>[%d{HH:mm:ss} [%thread] %-5level %logger{36}] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="SYS_ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+        <queueSize>10000</queueSize>
+        <appender-ref ref="STDOUT"/>
+        <includeCallerData>true</includeCallerData>
+    </appender>
+
+    <root level="DEBUG">
+        <appender-ref ref="SYS_ASYNC"/>
+    </root>
+
+    <logger name="requestLogger" level="DEBUG" additivity="false">
+        <appender-ref ref="SYS_ASYNC"/>
+    </logger>
+
+    <logger name="channelLogger" level="DEBUG" additivity="false">
+        <appender-ref ref="CHANNEL_ASYNC"/>
+    </logger>
+
+    <logger name="org.springframework" level="INFO"/>
+    <logger name="java.sql" level="DEBUG"/>
+    <logger name="org.apache.zookeeper" level="INFO"/>
+    <logger name="org.mybatis" level="INFO"/>
+    <logger name="org.I0Itec" level="INFO"/>
+    <logger name="org.apache" level="WARN"/>
+    <logger name="com.alibaba" level="INFO"/>
+
+
+</configuration>

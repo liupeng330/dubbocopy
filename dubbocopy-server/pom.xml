@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>dubbocopy</artifactId>
+		<groupId>qunar.tc.dubbocopy</groupId>
+		<version>1.0.3</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>dubbocopy-server</artifactId>
+	<packaging>war</packaging>
+
+	<properties>
+		<maven_deploy_skip>true</maven_deploy_skip>
+        <java_source_version>1.7</java_source_version>
+        <java_target_version>1.7</java_target_version>
+	</properties>
+
+	<dependencies>
+        <dependency>
+            <groupId>com.ning</groupId>
+            <artifactId>async-http-client</artifactId>
+            <version>1.8.14</version>
+        </dependency>
+
+		<dependency>
+			<groupId>com.googlecode.concurrent-trees</groupId>
+			<artifactId>concurrent-trees</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.4</version>
+		</dependency>
+		<!-- dubbo api -->
+		<dependency>
+			<groupId>qunar.tc.dubbocopy</groupId>
+			<artifactId>dubbocopy-api</artifactId>
+            <version>1.0.3</version>
+		</dependency>
+
+		<!-- spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+            <version>3.2.4.RELEASE</version>
+		</dependency>
+
+		<!-- qunar common -->
+		<dependency>
+			<groupId>qunar.common</groupId>
+			<artifactId>common-core</artifactId>
+            <version>8.2.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>qunar.common</groupId>
+			<artifactId>common-rpc</artifactId>
+            <version>8.2.3</version>
+		</dependency>
+
+		<!-- qconfig -->
+		<dependency>
+			<groupId>qunar.tc.qconfig</groupId>
+			<artifactId>qconfig-client</artifactId>
+            <version>1.1.2</version>
+		</dependency>
+
+		<!-- log -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+            <version>1.7.21</version>
+		</dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.1.7</version>
+        </dependency>
+
+        <dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+            <version>1.7.21</version>
+		</dependency>
+
+		<!-- netty -->
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-all</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+            <version>18.0</version>
+		</dependency>
+
+		<!-- json -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+		</dependency>
+
+		<!-- test -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit-dep</artifactId>
+            <version>4.10</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+            <version>3.2.4.RELEASE</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<finalName>ROOT</finalName>
+	</build>
+
+</project>
