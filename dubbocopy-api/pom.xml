@@ -21,6 +21,12 @@
 			<artifactId>commons-lang3</artifactId>
 			<version>3.4</version>
 		</dependency>
+
+		<dependency>
+			<groupId>qunar.common</groupId>
+			<artifactId>common-core</artifactId>
+			<version>8.2.3</version>
+		</dependency>
 	</dependencies>
 
 </project>

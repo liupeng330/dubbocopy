@@ -32,6 +32,7 @@ public class RouterServiceImpl implements RouterService {
 	@Resource
 	private RouterSelector reouterSelector;
 
+	@Override
 	public void refreshAllRouters(List<Router> routers) {
 		LOGGER.info("refreshAllRouters");
 		if (routers == null || routers.isEmpty()) {
