@@ -21,11 +21,12 @@
 			<artifactId>commons-lang3</artifactId>
 			<version>3.4</version>
 		</dependency>
-
+		<!-- qunar common -->
 		<dependency>
 			<groupId>qunar.common</groupId>
 			<artifactId>common-core</artifactId>
 			<version>8.2.3</version>
+			<!--<systemPath>/home/peng/.m2/repository/qunar/common/common-core/8.2.3/common-core-8.2.3.jar</systemPath>-->
 		</dependency>
 	</dependencies>
 
