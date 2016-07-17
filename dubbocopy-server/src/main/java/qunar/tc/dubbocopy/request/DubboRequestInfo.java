@@ -1,6 +1,7 @@
 package qunar.tc.dubbocopy.request;
 
-import qunar.agile.Strings;
+
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * @author song.xue created on 15/4/22
@@ -17,7 +18,7 @@ public class DubboRequestInfo {
 	}
 
 	public String getKey() {
-		return serviceName + (Strings.isEmpty(methodName) ? "" : "_" + methodName);
+		return serviceName + (StringUtils.isEmpty(methodName) ? "" : "_" + methodName);
 	}
 
 	public String getServiceName() {

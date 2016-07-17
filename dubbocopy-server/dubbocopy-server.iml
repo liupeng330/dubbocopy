@@ -15,8 +15,21 @@
         </sourceRoots>
       </configuration>
     </facet>
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/spring-servlet.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/applicationContext.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/applicationContext-task.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/applicationContext-service.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/applicationContext-server.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/applicationContext-dubbo.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/applicationContext-qconfig.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5" inherit-compiler-output="false">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -45,6 +58,7 @@
     <orderEntry type="library" name="Maven: qunar.common:common-core:8.2.3" level="project" />
     <orderEntry type="library" name="Maven: qunar.common:common-rpc:8.2.3" level="project" />
     <orderEntry type="library" name="Maven: qunar.tc.qconfig:qconfig-client:1.1.2" level="project" />
+    <orderEntry type="library" name="Maven: qunar.tc.qtracer:qtracer-common:1.0.7" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.21" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.1.7" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.1.7" level="project" />

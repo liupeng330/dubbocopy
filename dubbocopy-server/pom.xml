@@ -13,8 +13,10 @@
 
 	<properties>
 		<maven_deploy_skip>true</maven_deploy_skip>
-        <java_source_version>1.7</java_source_version>
-        <java_target_version>1.7</java_target_version>
+		<!--<java_source_version>1.7</java_source_version>-->
+		<!--<java_target_version>1.7</java_target_version>-->
+        <java_source_version>1.8</java_source_version>
+        <java_target_version>1.8</java_target_version>
 	</properties>
 
 	<dependencies>
@@ -65,6 +67,12 @@
 			<groupId>qunar.tc.qconfig</groupId>
 			<artifactId>qconfig-client</artifactId>
             <version>1.1.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>qunar.tc.qtracer</groupId>
+			<artifactId>qtracer-common</artifactId>
+			<version>1.0.7</version>
 		</dependency>
 
 		<!-- log -->
